@@ -2,18 +2,21 @@
 // SITE CONFIG
 // Replace the placeholder URLs below with Seif's real links before deploying.
 // ---------------------------------------------------------------------------
+const baseUrl = import.meta.env.BASE_URL;
+
+const asset = (path: string) => `${baseUrl}${path.replace(/^\/+/, "")}`;
 
 export const site = {
   name: "Seif Eldeen Hassan",
   shortName: "Seif",
   role: "AI & Machine Learning Engineer",
-  profileImage: "/profile/seif-profile.jpg",
+  profileImage: asset("profile/seif-profile.jpg"),
   subtitle:
     "Building practical AI systems with Machine Learning, RAG, LLMs, NLP, and intelligent automation.",
   badges: ["RAG Systems", "LLM Apps", "NLP", "AI Agents", "Machine Learning"],
 
   // TODO: replace with the real CV file. Drop it in /public and update the path.
-  cvUrl: "/cv/Seif-Eldeen-Hassan-CV.pdf",
+  cvUrl: asset("cv/Seif-Eldeen-Hassan-CV.pdf"),
 
   // TODO: replace with real profile URLs.
   github: "https://github.com/seifhassan200142-lab",

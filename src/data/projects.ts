@@ -6,12 +6,15 @@ import type { Project } from "../types";
 // to its path, e.g. "/projects/nabd-ai.png". Update githubUrl / liveUrl
 // with the real repository and demo links.
 // ---------------------------------------------------------------------------
+const baseUrl = import.meta.env.BASE_URL;
+
+const asset = (path: string) => `${baseUrl}${path.replace(/^\/+/, "")}`;
 
 export const projects: Project[] = [
   {
     id: "nabd-ai",
     title: "Nabd AI — Medical RAG & Hospital AI Assistant",
-    image: "/projects/nabd-ai-cover.png",
+    image: asset("projects/nabd-ai-cover.png"),
     imageAlt: "Nabd AI project cover showing medical RAG workflow",
     description:
       "A healthcare AI assistant designed to support medical workflows using Arabic input, guardrails, query mapping, hybrid retrieval, RAG, citations, and doctor-reviewed AI outputs.",
@@ -39,7 +42,7 @@ export const projects: Project[] = [
   {
     id: "internal-docs-rag",
     title: "Internal Docs RAG Assistant",
-    image: "/projects/internal-docs-rag-cover.png",
+    image: asset("projects/internal-docs-rag-cover.png"),
     imageAlt: "Internal Docs RAG Assistant project cover showing document question answering workflow",
     description:
       "A production-style RAG assistant that allows users to upload internal documents and ask questions with grounded answers and citations.",
@@ -60,7 +63,7 @@ export const projects: Project[] = [
   {
     id: "ai-operations-agent",
     title: "AI Operations Agent",
-    image: "/projects/ai-operations-agent-cover.png",
+    image: asset("projects/ai-operations-agent-cover.png") ,
     imageAlt: "AI Operations Agent project cover showing tool calling and approval workflow",
     description:
       "An AI operations assistant that understands requests, selects tools, executes multi-step workflows, summarizes tickets, drafts emails, uses a calculator, interacts with a local database, and requires human approval before sensitive actions.",
@@ -78,7 +81,7 @@ export const projects: Project[] = [
   {
     id: "domain-lora-finetuning",
     title: "Domain LoRA Fine-tuning Pipeline",
-    image: "/projects/domain-lora-finetuning-cover.png",
+    image: asset("projects/domain-lora-finetuning-cover.png"),
     imageAlt: "Domain LoRA Fine-tuning Pipeline project cover showing training workflow",
     description:
       "A lightweight educational fine-tuning pipeline for adapting a small open-source language model to structured customer support response formatting.",
@@ -89,7 +92,7 @@ export const projects: Project[] = [
   {
     id: "talk-to-your-data",
     title: "Talk to Your Data",
-    image: "/projects/talk-to-your-data-cover.png",
+    image: asset("projects/talk-to-your-data-cover.png"),
     imageAlt: "Talk to Your Data project cover showing analytics assistant workflow",
     description:
       "A local analytics assistant that lets users query tabular data, generate insights, explore dashboards, and interact with data using natural language.",
@@ -100,7 +103,7 @@ export const projects: Project[] = [
   {
     id: "real-estate-price-prediction",
     title: "Real Estate Price Prediction",
-    image: "/projects/real-estate-price-prediction-cover.png",
+    image: asset("projects/real-estate-price-prediction-cover.png"),
     imageAlt: "Real Estate Price Prediction project cover showing machine learning regression workflow",
     description:
       "A machine learning regression project for predicting real estate prices in Egypt using cleaned listing data, feature engineering, and model evaluation.",
